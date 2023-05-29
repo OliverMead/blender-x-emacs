@@ -8,6 +8,8 @@ Blender render job dispatch for multiple instances: [[https://www.youtube.com/wa
 
 Blender Command Port for VSCode/PyCharm: [[https://github.com/p4vv37/blender_command_port][blender_command_port]]
 
+hwpplayer1's fork of the above: [[https://github.com/masscollaborationlabs/blender_command_port][blender_command_port:fork]]
+
 * Correspondence
 ** Emacs IRC
 #+begin_quote
