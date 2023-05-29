@@ -5,3 +5,13 @@ The dream of true integration for Blender in GNU Emacs.
 
 * Progress
 There is none, this is where it all begins.
+
+* Goals
+See [[file:NOTES.org::Emacs IRC][Emacs IRC messages]], and below:
++ 'Live' Scripting, with direct REPL integration
++ Link to objects, materials, node groups, camera views, etc. in org-mode and org-capture
++ View and edit the object tree
++ View and edit the spreadsheet, potentially with live updates
++ View and edit render settings
++ Trigger rendering, both in batch mode and with the Blender GUI
++ Use TRAMP to run remote render jobs
