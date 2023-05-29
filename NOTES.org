@@ -2,13 +2,12 @@
 #+author: Oliver J. Mead <olivermead@olivermead.xyz>
 
 * Existing Solutions
-Blender Python editing and REPL/Console: [[https://github.com/emacsattic/blender-python-mode][blender-python-mode]]
-
-Blender render job dispatch for multiple instances: [[https://www.youtube.com/watch?v=H-5VbYxTsao][Emacs can make your Blender Better! - Rocknight Studios]]
-
-Blender Command Port for VSCode/PyCharm: [[https://github.com/p4vv37/blender_command_port][blender_command_port]]
-
-hwpplayer1's fork of the above: [[https://github.com/masscollaborationlabs/blender_command_port][blender_command_port:fork]]
++ Blender Python editing and REPL/Console: [[https://github.com/emacsattic/blender-python-mode][blender-python-mode]]
++ Blender render job dispatch for multiple instances: [[https://www.youtube.com/watch?v=H-5VbYxTsao][Emacs can make your Blender Better! - Rocknight Studios]]
++ Blender Command Port for VSCode/PyCharm: [[https://github.com/p4vv37/blender_command_port][blender_command_port]]
+  + hwpplayer1's fork of the above: [[https://github.com/masscollaborationlabs/blender_command_port][blender_command_port:fork]],
+    which has a small fix to work with the latest versions of blender (>=2.93)
+  + [[https://github.com/p4vv37/blender_command_port/pull/20][Our pull request to send our changes upstream]]
 
 * Correspondence
 ** Emacs IRC

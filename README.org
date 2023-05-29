@@ -8,7 +8,9 @@ There is none, this is where it all begins.
 
 * TODO [0/7] Goals
 See [[file:NOTES.org::Emacs IRC][Emacs IRC messages]], and below:
-+ [ ] 'Live' Scripting, with direct REPL integration
++ [-] 'Live' Scripting, with direct REPL integration
+  + [X] Connect to a running Blender session to send python commands with [[https://github.com/masscollaborationlabs/blender_command_port][blender_command_port]]
+  + [ ] Wrap it with some elisp to use within Emacs 
 + [ ] Link to objects, materials, node groups, camera views, etc. in org-mode and org-capture
 + [ ] View and edit the object tree
 + [ ] Spreadsheet
