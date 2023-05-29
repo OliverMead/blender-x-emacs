@@ -6,6 +6,8 @@ Blender Python editing and REPL/Console: [[https://github.com/emacsattic/blender
 
 Blender render job dispatch for multiple instances: [[https://www.youtube.com/watch?v=H-5VbYxTsao][Emacs can make your Blender Better! - Rocknight Studios]]
 
+Blender Command Port for VSCode/PyCharm: [[https://github.com/p4vv37/blender_command_port][blender_command_port]]
+
 * Correspondence
 ** Emacs IRC
 #+begin_quote
