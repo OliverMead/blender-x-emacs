@@ -1,0 +1,18 @@
+#+title: Notes and references for true Blender x Emacs integration
+#+author: Oliver J. Mead <olivermead@olivermead.xyz>
+
+* Existing Solutions
+Blender Python editing and REPL/Console: [[https://github.com/emacsattic/blender-python-mode][blender-python-mode]]
+Blender render job dispatch for multiple instances: [[https://www.youtube.com/watch?v=H-5VbYxTsao][Emacs can make your Blender Better! - Rocknight Studios]]
+* Correspondence:
+** Emacs IRC:
+#+begin_quote
+ olivermead │ hwpplayer1: well scripting is all that's currently possible. But running said script you have to go back to blender and reload it. It would be nice to be able to link into a part of a blender project with org-mode, see object tree / spreadsheet, dispatch render jobs. All with emacs bindings
+ olivermead │ but imagine using emacs's editing features on the object tree like one would use dired, writing notes with an org-capture template that link to points in node trees, render settings, or camera POVs
+#+end_quote
+
+** Blender IRC
+#+begin_quote
+ olivermead │ Hello, a fellow emacs user and I are looking to create an extension, or pair of extensions, to bring strong integration for blender in emacs. (view and edit object trees / spreadsheets, link into blender projects with org-mode and org-capture, write and run bpy scripts - although that has some existing solutions). Would it be feasible to achieve these goals by hooking into the blender python REPL/Console ? Are there any recent attempts
+ olivermead │ at something similar? There exists https://github.com/emacsattic/blender-python-mode - but it has not been updated in over a decade, and focused mostly on script editing
+#+end_quote
