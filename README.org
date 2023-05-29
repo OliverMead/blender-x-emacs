@@ -1,0 +1,7 @@
+#+title: blender-x-emacs
+#+author: Oliver J. Mead <olivermead@olivermead.xyz>
+
+The dream of true integration for Blender in GNU Emacs.
+
+* Progress
+There is none, this is where it all begins.
