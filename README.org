@@ -4,7 +4,7 @@
 The dream of true integration for Blender in GNU Emacs.
 
 * Progress
-There is none, this is where it all begins.
+A proof of concept! See [[#Goals][Goals]] and [[./NOTES.org::*Proof of Concept][NOTES.org:Proof of Concept]].
 
 * Note on Links
 In order to make the inter-page links work on the GitHub/CodeBerg
