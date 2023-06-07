@@ -7,10 +7,10 @@ The dream of true integration for Blender in GNU Emacs.
 There is none, this is where it all begins.
 
 * TODO [1/7] Goals
-See [[./NOTES.org::*Emacs IRC][Emacs IRC messages]], and below:
+See [[file:NOTES.org::*Emacs IRC][Emacs IRC Messages]], and below:
 + [X] 'Live' Scripting, with direct REPL integration
   + [X] Connect to a running Blender session to send python commands with [[https://github.com/masscollaborationlabs/blender_command_port][blender_command_port]]
-  + [X] Wrap it with some elisp to use within Emacs (see [[./NOTES.org::*Proof of Concept][Proof of Concept]])
+  + [X] Wrap it with some elisp to use within Emacs (see [[./NOTES.org#proof-of-concept][Proof of Concept]])
 + [ ] Link to objects, materials, node groups, camera views, etc. in org-mode and org-capture
 + [ ] View and edit the object tree
 + [ ] Spreadsheet
