@@ -53,3 +53,66 @@
 
  olivermead │ The blender console, I believe there's a VSCode extension that uses it
 #+end_quote
+
+* Proof of Concept
+** On the Blender Side
+Install the =long-connections= branch of =blender_command_port= at
+[[https://github.com/masscollaborationlabs/blender_command_port/tree/long-connections][masscollaborationlabs/blender_command_port:long-connections]] or
+[[https://github.com/OliverMead/blender_command_port/tree/long-connections][OliverMead/blender_command_port:long-connections]], enable the add-on,
+and click "Open Port" in the "System" section of Blender's
+preferences.
+
+** On the Emacs Side
+Execute the following emacs-lisp code to create the two commands to
+start and stop the connection:
+#+begin_src emacs-lisp
+  (defun blender-x-emacs/client-sentinel (proc msg)
+    (when (string= msg "connection broken by remote peer/n")
+      (with-current-buffer "blender-socket"
+        (insert (format "client %s quitting" proc)))))
+
+  ;; allow incoming text to be shown in the buffer
+  (defun blender-x-emacs/client-filter (proc string)
+    (comint-output-filter proc string))
+
+  ;; this will also be the buffer name
+  (defvar blender-x-emacs/process-name "*blender-socket*")
+
+  ;; create the network process, with comint to allow you to type
+  ;; text into the connection, and switch to it
+  (defun blender-x-emacs/connect nil
+    (interactive)
+    (make-network-process
+     :name blender-x-emacs/process-name
+     :buffer blender-x-emacs/process-name
+     :family 'ipv4
+     :host "localhost"
+     :service 5000
+     :sentinel 'blender-x-emacs/client-sentinel
+     :filter 'blender-x-emacs/client-filter)
+
+    (switch-to-buffer blender-x-emacs/process-name)
+    (with-current-buffer blender-x-emacs/process-name
+      (comint-mode)))
+
+  ;; kill the connection
+  (defun blender-x-emacs/stop nil
+    (interactive)
+    (delete-process blender-x-emacs/process-name))
+#+end_src
+
+Now =M-x blender-x-emacs/connect RET= to connect to Blender with the command port, this will
+give you an Emacs buffer into which you can type python commands, and they will run in Blender!
+
+** Next Steps
+*** The Blender Add-on
+Currently the =long-connections= branch of the Blender add-on is not
+passing its original test suite.  It will be necessary to find out why
+(since it seems to work otherwise), and either rectify the add-on or
+update the tests. Following this, the branch can be merged into the
+=master= branch of the fork(s), and another pull request created to
+upstream the improvements to [[https://github.com/p4vv37/blender_command_port][p4vv37/blender_command_port]] (assuming
+they will accept PRs).
+
+*** This Project
+See [[file:README.org::Goals][Goals]].
