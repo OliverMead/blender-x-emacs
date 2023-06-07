@@ -115,4 +115,4 @@ upstream the improvements to [[https://github.com/p4vv37/blender_command_port][p
 they will accept PRs).
 
 *** This Project
-See [[./README.org::*Goals][Goals]].
+See [[./README.org::*Goals][README.org:Goals]].
